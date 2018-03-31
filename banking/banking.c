@@ -23,19 +23,23 @@ int main (int argc, char *argv[]){
     int nr; 
     printf("You have %d money in your account! \n", amount);
     while(stop !=1){
-        puts("Enter a to add money to or s to take money out of your account. Press q to quit.");
-        scanf("%c %d", &c, &nr);
-        if(c=='a')
+        puts("Enter a to add money to or s to take money out of your account. Press q 0 to quit.");
+        scanf("%c ", &c);
+        if(c=='a'){
+            scanf("%d", &nr);
             amount += nr; 
-        else if (c=='s')
+        }
+        else if (c=='s'){
+            scanf("%d", &nr);
             amount -=nr; 
+        }
         else if (c=='q'){
             puts("Exiting. Thanks for using the expense simulator");
             stop=1;
         }
         else {
             puts("Sorry, I did not understand");
-            }
+        }
         printf("Your current balance is %d money.\n", amount);
     }
     return 0;
