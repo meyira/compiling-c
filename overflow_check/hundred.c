@@ -11,7 +11,7 @@ void add_x(int x){
         puts("this is too large"); 
         handle_overflow(); 
     }
-    printf("The nr is %d\n", x+100); 
+    printf("The nr+100 is %d\n", x+100); 
 
 }
 
